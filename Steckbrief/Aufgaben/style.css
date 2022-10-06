@@ -1,0 +1,64 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: large;
+    background: #111111;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.portrait {
+    text-align: center;
+    padding-top: 5em;
+    padding-bottom: 5em;
+}
+
+.banner {
+    z-index: 1;
+    width: 100%;
+}
+
+.aBox {
+    position: relative;
+    margin: auto;
+    padding-top: 2em;
+    padding-bottom: 3em;
+    background: #343434;
+    width: 50%;
+    border-bottom: 2px solid black;
+}
+
+.aBox:hover {
+    width: 52%;
+    background: #3b3b3b;
+}
+
+.imgcontainer {
+    width: 100%;
+}
+
+.linkcontainer {
+    width: 100%;
+    position: absolute;
+    bottom: 0px;
+}
+
+.imgcontainer>img {
+    position: relative;
+    display: block;
+    margin-left: auto;
+    margin-right: auto
+}
+
+.linkcontainer>a {
+    position: relative;
+    text-transform: uppercase;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 30px;
+    padding-bottom: 10px;
+}
