@@ -3,9 +3,9 @@ body {
     font-size: small;
     background: rgb(56, 56, 56);
     padding-top: 10px;
-    
+    flex-direction: column;
 }
 
-a{
+a {
     color: beige;
 }
