@@ -1,5 +1,17 @@
 //# sourceMappingURL=script.js.map
-function getRandomInt(max:number) {
+/* Aufgabe:
+    <L01_Zufallsgedicht>
+        Name:
+        <Amin Lakhal>
+            Matrikel:
+            <271128>
+                Datum:
+                <Datum der letzten Bearbeitung>
+                    Quellen:
+                    <Kommilitonis mit denen Du zusammengearbeitet hast oder von denen Du dich inspirieren ließest>
+                        */
+
+function getRandomInt(max: number) {
     return Math.floor(Math.random() * max);
 }
 
@@ -37,7 +49,7 @@ let x = getRandomInt(bausteine.Subjekt.length);
 let y = getRandomInt(bausteine.Prädikat.length);
 let z = getRandomInt(bausteine.Objekt.length);
 for (let i: number = 0; i < 5; i++) {
-console.log(bausteine.Subjekt[x] + " " + bausteine.Prädikat[y] + " " + bausteine.Objekt[z])
+    console.log(bausteine.Subjekt[x] + " " + bausteine.Prädikat[y] + " " + bausteine.Objekt[z])
 
 
     const index = bausteine.Subjekt.indexOf(bausteine.Subjekt[x]);

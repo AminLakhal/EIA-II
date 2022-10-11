@@ -1,4 +1,15 @@
 //# sourceMappingURL=script.js.map
+/* Aufgabe:
+    <L01_Zufallsgedicht>
+        Name:
+        <Amin Lakhal>
+            Matrikel:
+            <271128>
+                Datum:
+                <Datum der letzten Bearbeitung>
+                    Quellen:
+                    <Kommilitonis mit denen Du zusammengearbeitet hast oder von denen Du dich inspirieren ließest>
+                        */
 function getRandomInt(max) {
     return Math.floor(Math.random() * max);
 }
