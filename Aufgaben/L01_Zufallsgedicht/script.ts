@@ -51,15 +51,14 @@ let z = getRandomInt(bausteine.Objekt.length);
 for (let i: number = 0; i < 5; i++) {
     console.log(bausteine.Subjekt[x] + " " + bausteine.Prädikat[y] + " " + bausteine.Objekt[z])
 
-
-    const index = bausteine.Subjekt.indexOf(bausteine.Subjekt[x]);
-    const index2 = bausteine.Objekt.indexOf(bausteine.Objekt[y]);
-    const index3 = bausteine.Prädikat.indexOf(bausteine.Prädikat[z]);
-
+    let index = bausteine.Subjekt.indexOf(bausteine.Subjekt[x]);
+    let index3 = bausteine.Prädikat.indexOf(bausteine.Prädikat[y]);
+    let index2 = bausteine.Objekt.indexOf(bausteine.Objekt[z]);
+console.log(index)
     if (index !== -1) {
         bausteine.Subjekt.splice(index, 1);
-        bausteine.Objekt.splice(index, 1);
-        bausteine.Prädikat.splice(index, 1);
+        bausteine.Objekt.splice(index2, 1);
+        bausteine.Prädikat.splice(index3, 1);
     }
     x = getRandomInt(bausteine.Subjekt.length);
     y = getRandomInt(bausteine.Prädikat.length);
