@@ -5,7 +5,7 @@
         <Amin Lakhal>
             Matrikel:
             <271128>
-                Datum:
+                Datum:15.10.2022
                 <Datum der letzten Bearbeitung>
                     Quellen:
                     <Kommilitonis mit denen Du zusammengearbeitet hast oder von denen Du dich inspirieren ließest>
