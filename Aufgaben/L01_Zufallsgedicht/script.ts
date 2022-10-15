@@ -54,7 +54,6 @@ for (let i: number = 0; i < 5; i++) {
     let index = bausteine.Subjekt.indexOf(bausteine.Subjekt[x]);
     let index3 = bausteine.Prädikat.indexOf(bausteine.Prädikat[y]);
     let index2 = bausteine.Objekt.indexOf(bausteine.Objekt[z]);
-console.log(index)
     if (index !== -1) {
         bausteine.Subjekt.splice(index, 1);
         bausteine.Objekt.splice(index2, 1);
