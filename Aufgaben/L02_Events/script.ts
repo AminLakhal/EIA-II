@@ -70,7 +70,6 @@ namespace L02_Events {
             let button = document.querySelector("#button");
             
             button.dispatchEvent(event);
-            console.log(event.bubbles);
             
             
             

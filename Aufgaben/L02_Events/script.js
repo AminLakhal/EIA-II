@@ -39,7 +39,6 @@ var L02_Events;
             // send the event from some dispatcher
             let button = document.querySelector("#button");
             button.dispatchEvent(event);
-            console.log(event.bubbles);
         }
     }
 })(L02_Events || (L02_Events = {}));
