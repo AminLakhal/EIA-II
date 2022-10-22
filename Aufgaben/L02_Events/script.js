@@ -16,6 +16,7 @@ var L02_Events;
         body.addEventListener("click", logInfo);
         body.addEventListener("keyup", logInfo);
         document.querySelector("#button").addEventListener("click", customEvent);
+        document.addEventListener("customEvent", logInfo);
         function setInfoBox(_event) {
             const x = _event.clientX;
             const y = _event.clientY;
@@ -34,9 +35,9 @@ var L02_Events;
         function customEvent(_event) {
             // define a custom event that bubbles and carries some information
             let randomstring = "random";
-            let event = new CustomEvent("someSpecialType", { bubbles: true, detail: { someKey: randomstring } });
+            let event = new CustomEvent("customEvent", { bubbles: true, detail: { someKey: randomstring } });
             // send the event from some dispatcher
-            const button = document.querySelector("#button");
+            let button = document.querySelector("#button");
             button.dispatchEvent(event);
             console.log(event.bubbles);
         }
