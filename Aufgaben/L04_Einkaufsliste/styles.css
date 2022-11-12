@@ -6,6 +6,7 @@ body {
     padding: 0;
     text-align: center;
 }
+p{ margin: 0 0 0 0;}
 
 input:focus::placeholder {
     color: transparent;
