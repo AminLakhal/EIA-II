@@ -22,7 +22,7 @@ namespace L04 {
     let inputName: string;
     let inputComment: string;
     let currentDate;
-    let myform:any = document.getElementById("sendform");
+    let myform = document.getElementById("sendform");
     let button = document.getElementById("button");
     button.addEventListener("click", addItem);
 
