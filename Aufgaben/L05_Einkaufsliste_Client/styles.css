@@ -1,0 +1,127 @@
+@import "https://fonts.googleapis.com/css?family=Oswald";
+html,
+body {
+    font-family: "Oswald", sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+p {
+    margin: 0 0 0 0;
+}
+
+input:focus::placeholder {
+    color: transparent;
+}
+
+input[type=text],
+input[type=number],
+input[type=date],
+select,
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    box-sizing: border-box;
+    border: 1px solid black;
+}
+
+.inputProdukt {
+    width: 50%;
+    padding: 12px;
+    border: 1px solid black;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    background-color: white;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: space-evenly;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 15px;
+}
+
+.delete {
+    width: 50px;
+}
+
+#delBtn {
+    padding: 50%;
+    cursor: pointer;
+    color: red;
+    font-size: 20px;
+}
+
+.delBtn {
+    padding: 50%;
+    cursor: pointer;
+    color: red;
+    font-size: 20px;
+}
+
+.fa-check {
+    padding-top: 2px;
+    position: relative;
+    font-size: 20px;
+    margin-left: 0;
+    margin-right: auto;
+}
+
+#check {
+    z-index: 9;
+}
+
+.fa-check:hover,
+.fa-trash:hover {
+    transform: scale(1.1);
+}
+
+.fa-check:active,
+.fa-trash:active {
+    transform: scale(1.2);
+    transition: all .2s;
+}
+
+#check {
+    cursor: pointer;
+}
+
+.text {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    font-size: 18px;
+    text-transform: none;
+}
+
+.delAppend {
+    cursor: pointer;
+    color: red;
+    font-size: 20px;
+    margin-left: auto;
+    margin-right: 0;
+}
+
+@media only screen and (max-width: 844px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 15px;
+    }
+    .fa-check {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .delAppend {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
