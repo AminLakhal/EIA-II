@@ -1,0 +1,8 @@
+{
+    "Product": [
+        { "quantity": 1, "name": "Eis", "comment": "das billige", "date": "11.11.2022" },
+        { "quantity": 2, "name": "Wein", "comment": "trockene", "date": "10.1.2022" },
+        { "quantity": 12, "name": "Eier", "comment": "", "date": "23.03.2022" }
+    ]
+
+}

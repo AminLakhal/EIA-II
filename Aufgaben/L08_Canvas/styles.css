@@ -1,0 +1,58 @@
+html,
+body {
+    width: 100%;
+    margin: 0;
+    height: 100%;
+}
+
+#canvas {
+    position: absolute;
+}
+
+.container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0px;
+    width: 1920px;
+    height: 1080px;
+}
+
+.btn {
+    transition: opacity 2.3s;
+    opacity: 1;
+    z-index: 1;
+    font-family: 'Sora', sans-serif;
+    border: none;
+    background-color: inherit;
+    padding: 14px 28px;
+    font-size: 30px;
+    cursor: pointer;
+    color: yellow;
+    font-weight: 600;
+    text-align: center;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+    transition: transform .3s;
+    opacity: 1;
+}
+
+.btn:active {
+    transform: scale(1.1);
+    transition: all .2s;
+}
+
+.default {
+    color: white;
+}
+
+#span {
+    padding: 1rem 1rem 1rem 1rem;
+    border: 1px solid yellow;
+    position: fixed;
+    font-size: 15px;
+}
