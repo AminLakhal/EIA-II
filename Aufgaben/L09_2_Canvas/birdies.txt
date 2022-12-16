@@ -1,0 +1,93 @@
+
+export function drawBirdsGround(): void {
+
+        let colors: string[] = ["red", "blue", "green", "yellow", "brown", "pink"];
+
+        for (let i: number = 0; i < getRandomArbitrary(0, 10); i++) {
+            let x: number = getRandomInt(1920);
+            let y: number = getRandomArbitrary(800, 1000);
+
+            // Beine
+            crc2.save();
+            crc2.beginPath();
+            crc2.rect(x, y - 50, 2, 20);
+            crc2.closePath();
+            crc2.strokeStyle = "black";
+            crc2.fillStyle = "black";
+            crc2.stroke();
+            crc2.fill();
+            crc2.restore();
+
+            crc2.save();
+            crc2.beginPath();
+            crc2.rect(x + 40, y - 50, 2, 20);
+            crc2.closePath();
+            crc2.strokeStyle = "black";
+            crc2.fillStyle = "black";
+            crc2.stroke();
+            crc2.fill();
+            crc2.restore();
+
+            // Torso
+            crc2.save();
+            let radius: number = 40;
+            crc2.beginPath();
+            crc2.arc(x + 20, y - 80, radius, 0, 360);
+            crc2.closePath();
+            crc2.fillStyle = colors[Math.floor(getRandomArbitrary(0, colors.length))];
+            crc2.fill();
+            crc2.restore();
+
+            // Schnabel & Augen
+
+            if (Math.random() <= 0.5) {
+                crc2.save();
+                crc2.beginPath();
+                crc2.moveTo(x + 20, y - 60);
+                crc2.lineTo(x + 30, y - 80);
+                crc2.lineTo(x + 10, y - 80);
+                crc2.closePath();
+                crc2.fillStyle = "black";
+                crc2.fill();
+                crc2.restore();
+
+                crc2.save();
+                crc2.beginPath();
+                crc2.arc(x + 40, y - 90, 5, 0, 360);
+                crc2.closePath();
+                crc2.fillStyle = "black";
+                crc2.fill();
+                crc2.restore();
+
+                crc2.save();
+                crc2.beginPath();
+                crc2.arc(x, y - 90, 5, 0, 360);
+                crc2.closePath();
+                crc2.fillStyle = "black";
+                crc2.fill();
+                crc2.restore();
+            }
+
+            // Flügel
+            crc2.save();
+            crc2.beginPath();
+            crc2.moveTo(x + 65, y - 60);
+            crc2.lineTo(x + 65, y - 100);
+            crc2.lineTo(x + 60, y - 80);
+            crc2.closePath();
+            crc2.fillStyle = "black";
+            crc2.fill();
+            crc2.restore();
+
+            crc2.save();
+            crc2.beginPath();
+            crc2.moveTo(x - 25, y - 60);
+            crc2.lineTo(x - 25, y - 100);
+            crc2.lineTo(x - 20, y - 80);
+            crc2.closePath();
+            crc2.fillStyle = "black";
+            crc2.fill();
+            crc2.restore();
+
+
+        }
