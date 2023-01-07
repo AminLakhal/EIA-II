@@ -6,21 +6,13 @@ var L09_Canvas;
         _radius = 40;
         constructor(_radius) {
             console.log("bird constructor");
-            this.position = new L09_Canvas.Vector(L09_Canvas.getRandomArbitrary(0, 1809), L09_Canvas.getRandomArbitrary(300, 400));
+            this.position = new L09_Canvas.Vector(L09_Canvas.getRandomArbitrary(0, 1809), 445);
             this.velocity = new L09_Canvas.Vector(0, 0);
         }
         move(_timeslice) {
             let offset = new L09_Canvas.Vector(this.velocity.x, this.velocity.y);
             offset.scale(_timeslice);
             this.position.add(offset);
-            if (this.position.x < 0)
-                this.position.x += L09_Canvas.crc2.canvas.width;
-            if (this.position.y < 0)
-                this.position.y += L09_Canvas.crc2.canvas.height;
-            if (this.position.x > L09_Canvas.crc2.canvas.width)
-                this.position.x -= L09_Canvas.crc2.canvas.width;
-            if (this.position.y > L09_Canvas.crc2.canvas.height)
-                this.position.y -= L09_Canvas.crc2.canvas.height;
         }
         draw(_color) {
             L09_Canvas.crc2.save();

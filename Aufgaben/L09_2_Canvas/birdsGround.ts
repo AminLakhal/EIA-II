@@ -9,7 +9,7 @@ namespace L09_Canvas {
 
         constructor(_radius: number) {
             console.log("bird constructor");
-            this.position = new Vector(getRandomArbitrary(0, 1809), getRandomArbitrary(300,400));
+            this.position = new Vector(getRandomArbitrary(0, 1809), 445);
             this.velocity = new Vector(0, 0);
 
         }
@@ -20,14 +20,6 @@ namespace L09_Canvas {
             offset.scale(_timeslice);
             this.position.add(offset);
 
-            if (this.position.x < 0)
-                this.position.x += crc2.canvas.width;
-            if (this.position.y < 0)
-                this.position.y += crc2.canvas.height;
-            if (this.position.x > crc2.canvas.width)
-                this.position.x -= crc2.canvas.width;
-            if (this.position.y > crc2.canvas.height)
-                this.position.y -= crc2.canvas.height;
 
 
         }
