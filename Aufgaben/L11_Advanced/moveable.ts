@@ -2,7 +2,7 @@ namespace L09_Canvas {
 
     export class Moveable {
 
-       public position: Vector;
+        public position: Vector;
         public velocity: Vector;
         public explandable : boolean = false;
 

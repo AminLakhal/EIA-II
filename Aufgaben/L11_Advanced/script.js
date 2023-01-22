@@ -34,7 +34,7 @@ Quellen: <Kommilitonis mit denen Du zusammengearbeitet hast oder von denen Du di
         L09_Canvas.drawCloud({ x: 1900, y: 40 }, { x: 300, y: 75 });
         L09_Canvas.createPickingBirds(10);
         //createBirdsHouse(2);
-        L09_Canvas.createBirds(10);
+        L09_Canvas.createBirds(10, new L09_Canvas.Vector(0, 0));
         L09_Canvas.drawTree();
         L09_Canvas.drawBirdHouse();
         L09_Canvas.drawSnowman();
@@ -65,12 +65,12 @@ Quellen: <Kommilitonis mit denen Du zusammengearbeitet hast oder von denen Du di
                 }
             }
         }
-        function createBird() {
-            L09_Canvas.createBirds(10);
-            console.log(createBird);
+        function handleClick(_event) {
+            L09_Canvas.moveables.push(new L09_Canvas.flyingBird(_event.clientX, _event.clientY));
         }
-        canvas.addEventListener("mousedown", createBird);
+        document.addEventListener("click", handleClick);
         window.setInterval(update, 20);
+        console.log("push");
     }
 })(L09_Canvas || (L09_Canvas = {}));
 //# sourceMappingURL=script.js.map

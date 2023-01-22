@@ -4,11 +4,10 @@ namespace L09_Canvas {
     export class flyingBird extends Moveable {
 
 
-        constructor(_position?: Vector) {
+        constructor(x:number, y:number) {
             console.log("bird constructor");
 
-            super(_position);
-            this.position = new Vector(getRandomArbitrary(0, 1920), getRandomArbitrary(10, 300));
+            super(new Vector (x,y));
             this.velocity = new Vector(50, 50);
 
         }
@@ -114,10 +113,10 @@ namespace L09_Canvas {
     }
     
 
-    export function createBirds(_nBirds: number) {
+    export function createBirds(_nBirds: number, _position:Vector) {
         console.log("Create Birds");
         for (let i: number = 0; i < _nBirds; i++) {
-            moveables.push(new flyingBird(new Vector(0, 0)));
+            moveables.push(new flyingBird(_position.x, _position.y));
             //birds.push(_flyingBird);
         }
     }

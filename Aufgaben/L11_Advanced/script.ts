@@ -50,7 +50,7 @@ Quellen: <Kommilitonis mit denen Du zusammengearbeitet hast oder von denen Du di
         drawCloud({ x: 1900, y: 40 }, { x: 300, y: 75 });
         createPickingBirds(10);
         //createBirdsHouse(2);
-        createBirds(10);
+        createBirds(10, new Vector(0,0));
         drawTree();
         drawBirdHouse();
         drawSnowman();
@@ -91,22 +91,22 @@ Quellen: <Kommilitonis mit denen Du zusammengearbeitet hast oder von denen Du di
                     Moveable.move(1 / 50);
                     Moveable.draw(_birdColor);
                 }
+
+
             }
 
         }
 
-        function createBird ():void {
 
-            createBirds(10);
+        function handleClick (_event: MouseEvent):void {
 
-            console.log(createBird);
+            moveables.push(new flyingBird(_event.clientX ,_event.clientY));
         }
         
-    
-
-        canvas.addEventListener("mousedown", createBird);
-
+        document.addEventListener("click", handleClick);
         window.setInterval(update, 20);
+
+        console.log("push");
     }
 
 

@@ -2,10 +2,9 @@ var L09_Canvas;
 (function (L09_Canvas) {
     L09_Canvas.colors = ["red", "blue", "green", "yellow", "brown", "pink"];
     class flyingBird extends L09_Canvas.Moveable {
-        constructor(_position) {
+        constructor(x, y) {
             console.log("bird constructor");
-            super(_position);
-            this.position = new L09_Canvas.Vector(L09_Canvas.getRandomArbitrary(0, 1920), L09_Canvas.getRandomArbitrary(10, 300));
+            super(new L09_Canvas.Vector(x, y));
             this.velocity = new L09_Canvas.Vector(50, 50);
         }
         move(_timeslice) {
@@ -95,10 +94,10 @@ var L09_Canvas;
         }
     }
     L09_Canvas.flyingBird = flyingBird;
-    function createBirds(_nBirds) {
+    function createBirds(_nBirds, _position) {
         console.log("Create Birds");
         for (let i = 0; i < _nBirds; i++) {
-            L09_Canvas.moveables.push(new flyingBird(new L09_Canvas.Vector(0, 0)));
+            L09_Canvas.moveables.push(new flyingBird(_position.x, _position.y));
             //birds.push(_flyingBird);
         }
     }
