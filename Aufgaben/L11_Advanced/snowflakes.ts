@@ -2,7 +2,6 @@ namespace L09_Canvas {
 
     export class Snowflake extends Moveable {
 
-        type: number;
         size: number;
 
 
